@@ -44,18 +44,21 @@
                                 </li>
 
                                 <li>
-                                    <a class="text-gray-500 transition hover:text-gray-500/75"
-                                        href="{{ route('productos.index') }}"> Productos </a>
+                                    <x-nav-link href="{{ route('productos.index') }}" :active="request()->routeIs('categorias.index')">
+                                        {{ __('Productos') }}
+                                    </x-nav-link>
                                 </li>
 
                                 <li>
-                                    <a class="text-gray-500 transition hover:text-gray-500/75"
-                                        href="{{ route('salidas.index') }}"> Ventas </a>
+                                    <x-nav-link href="{{ route('salidas.index') }}" :active="request()->routeIs('salidas.index')">
+                                        {{ __('Salidas') }}
+                                    </x-nav-link>
                                 </li>
 
                                 <li>
-                                    <a class="text-gray-500 transition hover:text-gray-500/75"
-                                        href="{{ route('permission.index') }}"> Permisos </a>
+                                    <x-nav-link href="{{ route('permission.index') }}" :active="request()->routeIs('permission.index')">
+                                        {{ __('Permisos') }}
+                                    </x-nav-link>
                                 </li>
 
                                 <li>
